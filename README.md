@@ -1,36 +1,38 @@
 # ATRI · My Dear Desktop
 
-Windows 上的亚托莉桌宠：Live2D、表情、互动与衣橱，支持填写自己的模型服务进行文字聊天。
+**本 ATRI 桌宠只能绑定 QQ 聊天机器人 ATRI 账号 2635533699。** 每位用户用自己的 QQ 绑定自己的桌宠，共用这一个 ATRI 机器人；不是更换成自己的机器人账号。
 
-**[下载最新版](https://github.com/txays/ATRI-Desktop/releases/latest)** · **[全部历史版本](https://github.com/txays/ATRI-Desktop/releases)** · **[使用说明](https://github.com/txays/ATRI-Desktop/blob/main/docs/使用说明.md)**
+**[下载最新版](https://github.com/txays/ATRI-Desktop/releases/latest)** · **[使用说明](docs/使用说明.md)** · **[版本列表](https://github.com/txays/ATRI-Desktop/releases)**
 
-## 下载安装
+## 开始使用
 
-1. 在 Releases 下载 `ATRI-Desktop-v版本号-windows-x64.zip`。
-2. 完整解压，双击 `ATRI/ATRI.exe` 或 `Start-ATRI.cmd`。
-3. 拖动人物移动；右键打开聊天、衣橱、表情和设置。
-4. 需要 AI 聊天时，在“聊天与联动设置”填写自己的 API 地址、模型和密钥。
+1. 添加 **ATRI：2635533699** 为 QQ 好友。
+2. 从 Releases 下载 `ATRI-Desktop-v3.2.0-windows-x64.zip`，完整解压后运行 `ATRI/ATRI.exe` 或 `Start-ATRI.cmd`。
+3. 在「QQ 绑定」窗口点击「生成一次性绑定码」。
+4. 用你自己的 QQ **私聊 2635533699**，发送 `绑定桌宠 这里填绑定码`。
+5. 回到桌宠窗口核对显示的 QQ 号码，点击「确认绑定到 QQ …」。
+6. 在 QQ 发送 `你现在跳一下`、`眨眨眼` 或 `桌宠状态`；也可右键桌宠 →「和 ATRI 聊天」。
 
-支持 Windows 10 / 11 x64；已包含 Electron 和模型资源，不需要另装 Node、Python、DSH 或 QQ 机器人。
+Windows 10 / 11 x64；包内包含运行环境和 Live2D 模型，无需另装 Python、Node.js、DSH 或 QQ 机器人。
 
-外观、互动、表情与换装可离线使用。文字聊天支持 OpenAI Chat Completions 兼容服务及本机 Ollama。聊天使用自己的 API 配置和额度，程序不提供公共 API Key。
+## 连接范围
 
-专属音色与 QQ 联动需要自行部署兼容后端，本包不包含 QQ 登录态、私人机器人、聊天记忆或语音训练权重。详细范围见使用说明。
+- 机器人固定为 **2635533699**，服务地址由管理员批准，界面只读；更换机器人或服务地址必须取得管理员签名批准。
+- 每个 QQ 同时绑定一个桌宠；重新确认会撤销该 QQ 的旧桌宠凭据。用户只能控制自己的桌宠并读取自己的互动和会话。
+- 未绑定时可以查看角色和本地衣橱，聊天及 QQ 联动需要完成绑定。此版不提供独立 API 聊天设置。
+- QQ 消息、桌面聊天、互动与语音使用绑定的 ATRI 服务，依赖服务提供者的机器人和公网联动服务在线。
+- 语音是否可用取决于机器人后端；本包不包含语音训练权重、QQ 登录态、服务密钥或其他人的聊天记忆。
 
-## 升级与回退
+## 升级
 
-每个版本保存在独立 Release 中。先退出旧版，再将新版解压到新文件夹启动。个人设置和独立聊天记录保存在 `%LOCALAPPDATA%\ATRI Desktop`，升级后继续使用。需要回退时启动旧版即可；涉及数据格式变化的版本以更新说明为准。
+退出旧版，将新版解压到新文件夹后启动。新发行版个人数据保存在 `%LOCALAPPDATA%\ATRI Desktop`，与程序目录分开。旧独立版的 API 设置不再使用；第一次使用本版需要完成 QQ 绑定。
 
-用 PowerShell 的 `Get-FileHash -Algorithm SHA256` 对比每个版本附带的 `SHA256SUMS.txt`，确认下载文件完整。
+**v3.2.0 替换旧的 v3.1.0，旧版此次从 GitHub 移除。后续版本可以继续按独立 Release 保留。**
 
-## 后续版本
-
-普通用户只需要下载桌宠 ZIP。`ATRI-Publisher-Kit-v版本号.zip` 是维护者使用的构建工具、冻结源码和资源，不需要普通使用者下载。该工具保存各版 ZIP、哈希、版本目录，拒绝覆盖旧版本。
-
-从自己的开发目录制作新版，运行发行工具中的 `tools/New-Release.ps1`；检查通过后用 `tools/Publish-GitHub.ps1` 上传到同一仓库的 Releases。见 [发布维护说明](发布维护说明.md)。
+包内附中文说明、第三方声明和文件清单；下载文件可用对应版本的 `SHA256SUMS.txt` 校验。维护者可下载 Publisher Kit，按[发布维护说明](发布维护说明.md)制作后续版本。
 
 ## 素材与反馈
 
-非官方同人项目，角色形象及模型等素材权利归原权利人。模型作者为远梦清思，当前按非商业同人分享整理；第三方声明和许可证随包保留，不将角色和模型统一授权为 MIT。商业使用请另行确认授权。
+非官方同人项目；角色、模型与素材权利归原权利人，模型作者为远梦清思。当前按非商业同人分享整理，第三方条款随包保留，见[第三方声明](docs/第三方声明.md)。商业使用需另行确认授权。
 
-问题反馈请附版本、Windows 版本、复现步骤和错误提示。不要上传 API Key、`connection.json`、`host.json` 或私人聊天记录。
+问题反馈请附版本、Windows 版本、复现步骤和错误提示。不要上传 `qq-binding.json`、令牌、私人聊天记录或 QQ 登录信息。
