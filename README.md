@@ -1,4 +1,4 @@
-# ATRI · My Dear Desktop亚托利桌宠
+# ATRI · My Dear Desktop亚托莉桌宠
 
 **本 ATRI 桌宠在未经许可的情况下只能绑定 QQ 聊天机器人 ATRI 账号 2635533699。** 每位用户用自己的 QQ 绑定自己的桌宠，共用这一个 ATRI 机器人；不是更换成自己的机器人账号。
 
